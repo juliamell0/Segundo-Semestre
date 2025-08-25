@@ -1,5 +1,5 @@
 body {
-  background: linear-gradient(to bottom, #e0c3fc, #d35cb9);
+  background: linear-gradient(to bottom, #df8d74, #f11d1d);
   display: flex;
   justify-content: center;
   align-items: center;
@@ -43,7 +43,7 @@ input[type="text"] {
   font-size: 16px;
 }
 button {
-  background-color: #a13869;
+  background-color: #000000;
   color: white;
   border: none;
   padding: 10px 15px;
@@ -71,4 +71,8 @@ ol li {
 
 ol li:last-child {
   border-bottom: none;
+}
+.logo {
+  width: 250 px;
+  margin-bottom: -10
 }

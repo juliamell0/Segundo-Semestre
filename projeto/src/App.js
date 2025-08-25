@@ -1,54 +1,39 @@
 import React, { useState } from 'react'; 
 import './App.css';
 
+import AdicionarProduto from './components/AdicionarProduto'
+import ListaDeProdutos from './components/ListaDeProdutos'
+import logo from '../src/assets/images/logopc.png';
+
+
 function App() {
-  
-  const [item, setItem] = useState('');
 
+  const [produtos, setProdutos] = useState(['Mouse', 'Teclado', 'Monitor']);
   
-  const [itens, steItens] = useState(['Leite', 'Pão', 'Ovos']);
-
+  const adicionarUsuario = (nome) => {
+    const produto = nome.trim();
   
-  const AdicionarItem = () => {
-
-    
-    if (itens.includes(item)) {
-      alert('Item já existe!');
+    if (produtos.includes (produto)) {
+      alert('O produto já existe');
       return;
     }
-    steItens([...itens, item]);
-    
-    setItem('');
-
-  };
   
-  return (
-    <div className="App>">
-      <h1>Adicionar item na lista de compras</h1>
-        <input
-          type="text"
-          value={(item)}
-          onChange={(e) => setItem(e.target.value)}
-          placeholder="Digite o nome do item"
-      />
-     <button onClick={AdicionarItem}>Adicionar</button>
-     
-    
-      <hr />
-      <h2>Lista de compras</h2>
-      <ol>
-      
-        {itens.map((user, index) => (
-          <li key={index}>{user}</li>
-        ))}
-      </ol>
-      </div>
-      
+    setProdutos([...produtos, produto]);
+  };
 
+
+return (
+
+  <div className="App">
+    <img src = {logo} className="logo" alt="Logo PC" />
+    <h1>Produtos</h1>
+    <AdicionarProduto onAdd={adicionarUsuario} />
+    <hr />
+    <h2>Lista de produtos</h2>
+    <ListaDeProdutos itens={produtos} />
+    </div>
   );
+
 }
 
-      
-
 export default App;
-//ol: lista ordenada
