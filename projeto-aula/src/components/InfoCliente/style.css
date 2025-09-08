@@ -1,0 +1,179 @@
+/* style.css */
+
+/* Fonte arredondada, alegre */
+@import url('https://fonts.googleapis.com/css2?family=Baloo+2&display=swap');
+
+body {
+  background: linear-gradient(135deg, #e6f0ff 0%, #cce0ff 100%);
+  font-family: 'Baloo 2', cursive, sans-serif;
+  color: #2a3d66;
+  margin: 0;
+  padding: 50px 20px;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+}
+
+.info-cliente {
+  background: #e6f0ff;
+  max-width: 450px;
+  width: 100%;
+  padding: 40px 45px;
+  border-radius: 28px;
+  box-shadow:
+    0 6px 15px rgba(70, 130, 180, 0.25),
+    inset 0 0 10px #b3c6ff;
+  border: 5px solid #4a7bd1;
+  text-align: center;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.info-cliente:hover {
+  transform: translateY(-5px);
+  box-shadow:
+    0 15px 30px rgba(70, 130, 180, 0.45),
+    inset 0 0 15px #99b3ff;
+}
+
+.icone-cliente {
+  width: 170px;
+  height: 170px;
+  margin: 0 auto 35px;
+  display: block;
+  border-radius: 50%;
+  border: 8px solid #99b3ff;
+  box-shadow:
+    0 0 15px #7f9fff,
+    inset 0 5px 10px #e0eaff;
+  transition: transform 0.35s ease, box-shadow 0.35s ease;
+  object-fit: cover;
+  background: #f0f5ff;
+}
+
+.icone-cliente:hover {
+  transform: scale(1.15) rotate(5deg);
+  box-shadow:
+    0 0 25px #4a7bd1,
+    inset 0 8px 15px #cce0ff;
+}
+
+h2 {
+  font-size: 2.6rem;
+  font-weight: 700;
+  margin-bottom: 35px;
+  color: #2a3d66;
+  text-shadow: 2px 2px 6px #b3c6ff;
+  letter-spacing: 1.5px;
+}
+
+form > div {
+  margin-bottom: 28px;
+  text-align: left;
+}
+
+label {
+  display: block;
+  font-weight: 700;
+  color: #4063a4;
+  margin-bottom: 10px;
+  font-size: 1.15rem;
+  letter-spacing: 0.05em;
+  user-select: none;
+}
+
+input[type="text"],
+input[type="email"] {
+  width: 100%;
+  padding: 14px 18px;
+  border: 3px solid #4a7bd1;
+  border-radius: 20px;
+  font-size: 1.1rem;
+  font-family: 'Baloo 2', cursive, sans-serif;
+  background-color: #f0f5ff;
+  color: #2a3d66;
+  box-shadow: inset 0 3px 6px #cce0ff;
+  transition: border-color 0.3s ease, box-shadow 0.3s ease, background-color 0.3s ease;
+}
+
+input[type="text"]:focus,
+input[type="email"]:focus {
+  border-color: #1a4da0;
+  outline: none;
+  background-color: #d9e6ff;
+  box-shadow:
+    0 0 8px 3px rgba(26, 77, 160, 0.5),
+    inset 0 3px 8px #99b3ff;
+}
+
+button[type="submit"] {
+  width: 100%;
+  background-color: #1a4da0;
+  color: #fff;
+  font-weight: 700;
+  font-size: 1.3rem;
+  padding: 16px 0;
+  border: none;
+  border-radius: 24px;
+  cursor: pointer;
+  box-shadow:
+    0 6px 15px rgba(26, 77, 160, 0.55);
+  transition: background-color 0.3s ease, box-shadow 0.3s ease, transform 0.15s ease;
+  letter-spacing: 0.06em;
+}
+
+button[type="submit"]:hover {
+  background-color: #153d80;
+  box-shadow:
+    0 10px 25px rgba(21, 61, 128, 0.75);
+  transform: translateY(-2px);
+}
+
+button[type="submit"]:active {
+  transform: translateY(0);
+  box-shadow:
+    0 5px 12px rgba(21, 61, 128, 0.6);
+}
+
+hr {
+  margin: 40px 0 35px;
+  border: none;
+  border-top: 3px dashed #4a7bd1;
+  border-radius: 6px;
+  opacity: 0.7;
+}
+
+h3 {
+  font-size: 1.8rem;
+  color: #2a3d66;
+  margin-bottom: 28px;
+  text-align: center;
+  font-weight: 700;
+  letter-spacing: 0.04em;
+  text-shadow: 1px 1px 3px #b3c6ff;
+}
+
+ul {
+  list-style: none;
+  padding-left: 0;
+  color: #4063a4;
+  font-size: 1.1rem;
+  user-select: none;
+}
+
+ul li {
+  background: #cce0ff;
+  margin-bottom: 16px;
+  padding: 14px 20px;
+  border-radius: 22px;
+  box-shadow:
+    inset 0 2px 6px rgba(255, 255, 255, 0.7),
+    0 3px 6px rgba(70, 130, 180, 0.35);
+  transition: background-color 0.35s ease, transform 0.2s ease;
+}
+
+ul li:hover {
+  background-color: #99b3ff;
+  transform: scale(1.03);
+  cursor: default;
+}
