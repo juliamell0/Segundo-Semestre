@@ -1,0 +1,138 @@
+/* styles.css */
+
+/* Reset básico */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+  /* Fundo com degrade suave */
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  color: #333;
+  padding: 40px 20px;
+  display: flex;
+  justify-content: center;
+  min-height: 100vh;
+}
+
+/* Container para os componentes */
+.cadastro-usuario, .listar-usuario {
+  background: rgba(255, 255, 255, 0.95);
+  border-radius: 12px;
+  box-shadow: 0 8px 30px rgba(0,0,0,0.12);
+  padding: 30px 35px;
+  width: 370px;
+  margin: 20px;
+  transition: box-shadow 0.4s ease, transform 0.3s ease;
+}
+
+.cadastro-usuario:hover, .listar-usuario:hover {
+  box-shadow: 0 12px 45px rgba(0,0,0,0.18);
+  transform: translateY(-6px);
+}
+
+h2 {
+  margin-bottom: 25px;
+  color: #4b367c;
+  font-weight: 700;
+  font-size: 1.8rem;
+  text-align: center;
+  text-shadow: 0 1px 3px rgba(75, 54, 124, 0.5);
+}
+
+/* Form */
+form div {
+  margin-bottom: 18px;
+}
+
+label {
+  display: block;
+  margin-bottom: 8px;
+  font-weight: 600;
+  color: #5a4a91;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="tel"] {
+  width: 100%;
+  padding: 12px 16px;
+  border: 2px solid #b3a7d9;
+  border-radius: 8px;
+  font-size: 1rem;
+  transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+input[type="text"]:focus,
+input[type="email"]:focus,
+input[type="tel"]:focus {
+  border-color: #764ba2;
+  outline: none;
+  box-shadow: 0 0 8px rgba(118, 75, 162, 0.6);
+}
+
+/* Botão estilizado com efeito */
+button[type="submit"] {
+  width: 100%;
+  background: linear-gradient(45deg, #764ba2, #667eea);
+  color: white;
+  border: none;
+  padding: 14px 0;
+  font-size: 1.15rem;
+  font-weight: 700;
+  border-radius: 10px;
+  cursor: pointer;
+  box-shadow: 0 5px 15px rgba(118, 75, 162, 0.6);
+  transition: background 0.4s ease, box-shadow 0.4s ease, transform 0.3s ease;
+}
+
+button[type="submit"]:hover {
+  background: linear-gradient(45deg, #5b3b85, #5465ce);
+  box-shadow: 0 8px 25px rgba(84, 101, 206, 0.85);
+  transform: translateY(-3px);
+}
+
+button[type="submit"]:active {
+  transform: translateY(1px);
+  box-shadow: 0 4px 12px rgba(54, 45, 118, 0.7);
+}
+
+/* Lista */
+ul {
+  list-style-type: none;
+  max-height: 320px;
+  overflow-y: auto;
+  padding-right: 8px;
+}
+
+ul li {
+  background: linear-gradient(135deg, #ede7f6, #d1c4e9);
+  margin-bottom: 14px;
+  padding: 14px 18px;
+  border-radius: 10px;
+  font-weight: 600;
+  color: #3b2c5a;
+  box-shadow: inset 0 0 8px rgba(0,0,0,0.08);
+  transition: background 0.3s ease;
+}
+
+ul li:hover {
+  background: linear-gradient(135deg, #d1c4e9, #b39ddb);
+}
+
+/* Scrollbar personalizada */
+ul::-webkit-scrollbar {
+  width: 10px;
+}
+
+ul::-webkit-scrollbar-thumb {
+  background: #764ba2;
+  border-radius: 6px;
+}
+
+ul::-webkit-scrollbar-track {
+  background: rgba(255, 255, 255, 0.3);
+}
